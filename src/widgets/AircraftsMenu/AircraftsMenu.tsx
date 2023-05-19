@@ -4,6 +4,7 @@ import Image from "next/image";
 import style from "./AircraftsMenu.module.scss";
 import AircraftChecklists from "../../assets/checklists";
 import classNames from "classnames";
+import { slugify } from "@/utils/slugify";
 
 export interface AircraftsMenuProps{
   className?: string
@@ -32,9 +33,9 @@ export default function AircraftsMenu({className}: AircraftsMenuProps) {
       <ul className={style.ManufacturersList}>
         {Object.keys(acftByManufacturer).map((manufacturer) => {
           return (
-            <li className={style.Manufacturer}>
-              <input type="checkbox" id={manufacturer} />
-              <label htmlFor={manufacturer}>
+            <li className={style.Manufacturer} key={`manufacturer-${slugify(manufacturer)}`}>
+              <input type="checkbox" id={`manufacturer-${slugify(manufacturer)}`} />
+              <label htmlFor={`manufacturer-${slugify(manufacturer)}`}>
                 {manufacturer}
                 <Image
                   src="img/icons/chevron-down.svg"
@@ -48,7 +49,7 @@ export default function AircraftsMenu({className}: AircraftsMenuProps) {
               <ul className={style.AircraftsList}>
                 {acftByManufacturer[manufacturer].map((aircraft) => {
                   return (
-                    <li className={style.Aircraft}>
+                    <li className={style.Aircraft} key={`acft-${aircraft.key}`}>
                       <Link href={`/checklist/${aircraft.key}`}>
                         <Image
                           src="img/icons/airplane-right.svg"
