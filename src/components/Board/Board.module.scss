@@ -1,0 +1,25 @@
+.Board {
+    position: relative;
+    width: 100%;
+    padding-top: 12px;
+
+  main {
+    min-width: 300px;
+    min-height: 100px;
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 12px;
+    padding: 24px 12px;
+  }
+}
+
+.Title {
+  position: absolute;
+  text-transform: uppercase;
+  background-color: black;
+  top: 2px;
+  padding: 0px 4px;
+  left: 12px;
+  font-size: 18px;
+  font-weight: bold;
+}

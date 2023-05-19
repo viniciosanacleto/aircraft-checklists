@@ -1,0 +1,31 @@
+.NoRealFlightTag {
+  display: flex;
+  flex-direction: row;
+}
+
+.Flag {
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+  min-height: 20px;
+  background-color: #fe5f5f;
+  overflow: hidden;
+
+  .Division{
+    width: 35px;
+    height: 5px;
+    background-color: yellow;
+    transform: rotate(45deg);
+    left: 0;
+    margin-left: -5px;
+    margin-top: 10px;
+  }
+}
+
+.Text {
+  margin-left: 8px;
+  padding: 0 4px;
+  background-color: #fe5f5f;
+  color: #000;
+  font-weight: bold;
+}

@@ -1,0 +1,12 @@
+.ChecklistBoard{
+    width: 100%;
+}
+
+.Board{
+    main{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        overflow-x: auto;
+    }
+}
