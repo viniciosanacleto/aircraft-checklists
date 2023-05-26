@@ -1,8 +1,9 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
-import style from './layout.module.scss'
+import style from "./layout.module.scss";
+import Footer from "@/widgets/Footer/Footer";
 
-const inter = Inter({ subsets: ["latin"]});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Aircraft Checklists",
@@ -17,9 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <body>
-        <div className={style.Page}>{children}</div>
+        <div className={style.PageContainer}>
+          {children}
+          <Footer className={style.Footer}/>
+        </div>
       </body>
     </html>
   );
 }
-
