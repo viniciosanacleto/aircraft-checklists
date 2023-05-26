@@ -1,0 +1,60 @@
+.Button {
+  position: fixed;
+  z-index: 1;
+  bottom: 24px;
+  right: 24px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 60px;
+  height: 60px;
+  background-color: #000;
+  border: 2px solid white;
+  border-radius: 100%;
+}
+
+.Overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+
+  width: 100vw;
+  height: 50vh;
+  background-color: #000023;
+
+  .ContentContainer {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    height: 100%;
+    padding: 24px 48px;
+
+    .CloseButton {
+      position: absolute;
+      top: 24px;
+      right: 12px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+
+  .Menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 8px;
+
+    button{
+      width: 250px;
+    }
+  }
+}

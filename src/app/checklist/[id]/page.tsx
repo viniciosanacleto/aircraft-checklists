@@ -2,6 +2,7 @@ import Checklists from "../../../assets/checklists";
 import { redirect } from "next/navigation";
 import ChecklistBoard from "@/widgets/ChecklistBoard/ChecklistBoard";
 import NoRealFlightTag from "@/components/NoRealFlightTag/NoRealFlightTag";
+import ToolsOverlay from "@/widgets/ToolsOverlay/ToolsOverlay";
 import { slugify } from "@/utils/slugify";
 
 import style from "./page.module.scss";
@@ -26,6 +27,7 @@ export default function ChecklistPage({ params }: ChecklistPageProps) {
 
   return (
     <div className={style.PageContainer}>
+      <ToolsOverlay />
       <div className={style.Header}>
         <h1>
           {aircraftChecklists.manufacturer} - {aircraftChecklists.model}
