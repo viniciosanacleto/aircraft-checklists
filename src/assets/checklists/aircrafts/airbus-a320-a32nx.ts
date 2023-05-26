@@ -98,6 +98,7 @@ const AirbusA320: Checklist = {
         { item: "Nose Light", expect: "TAKEOFF" },
         { item: "Landing Lights", expect: "ON" },
         { item: "Strobe Lights", expect: "ON" },
+        { item: "Elapsed Timer", expect: "START" },
       ],
     },
 
@@ -108,8 +109,6 @@ const AirbusA320: Checklist = {
         { item: "Flaps", expect: "VERIFY RETRACTED" },
         { item: "Ground Spoilers", expect: "DISARM" },
         { item: "Pack 1 & 2", expect: "ON" },
-        { item: "Engine & Wing Anti-Ice", expect: "AS REQ" },
-        { item: "ENG Mode Selector", expect: "AS REQ" },
         { item: "Transponder/TCAS", expect: "TA/RA" },
       ],
     },
@@ -121,14 +120,6 @@ const AirbusA320: Checklist = {
         { item: "Pressurization", expect: "CHECK" },
         { item: "Flight Plan", expect: "MONITOR" },
         { item: "Top Of Descent", expect: "CROSS CHECK" },
-      ],
-    },
-
-    {
-      name: "DESCENT",
-      checklist: [
-        { item: "Engine & Wing Anti-Ice", expect: "AS REQ" },
-        { item: "ENG Mode Selector", expect: "AS REQ" },
       ],
     },
 
