@@ -1,0 +1,19 @@
+.Footer{
+    padding: 24px 0;
+    font-size: 14px;
+    color: #eee;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Git{
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+    a{
+        color: #6060ff;
+    }
+}
