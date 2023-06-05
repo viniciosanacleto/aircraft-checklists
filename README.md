@@ -4,7 +4,7 @@
 
 # Aircraft Checklists
 
-Simple and responsive aircraft checklists using only frontend!
+ Sophisticated and highly interactive aircraft checklists for simulation purposes, utilizing exclusively frontend technologies!
 
 ## Demo
 [Link](https://aircraft-checklists.vercel.app/)
