@@ -1,5 +1,18 @@
-.Page{
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
+.PageContainer {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.Footer {
+  margin-top: auto;
+
+  @media (max-width: 768px) {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
 }
