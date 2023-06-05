@@ -21,7 +21,7 @@ export default function Footer({ className }: FooterProps) {
             height={20}
           />
           <span>Open Source</span>
-          <a href="/" target="_blank">Github</a>
+          <a href="https://github.com/viniciosanacleto/aircraft-checklists" target="_blank">Github</a>
         </div>
       </div>
 
