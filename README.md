@@ -1,5 +1,5 @@
 
-<img src="docs/images/mockup.jpg" alt= “test” width="100%" height="100%"/>
+<img src="docs/images/mockup.png" alt="Aircraft Checklists"/>
 
 
 # Aircraft Checklists
