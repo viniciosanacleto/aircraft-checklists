@@ -1,4 +1,13 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+<img src="docs/images/mockup.jpg" alt= “test” width="100%" height="100%"/>
+
+
+# Aircraft Checklists
+
+Simple and responsive aircraft checklists using only frontend!
+
+## Demo
+[Link](https://aircraft-checklists.vercel.app/)
 
 ## Getting Started
 
@@ -14,21 +23,32 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Checklists
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+All the important files to the checklists are located in the folder: `src/assets/checklists`
 
-## Learn More
+The checklist pages are generated based on the files inside the `aircrafts` folder. They are builded using SSG during the app build time.
 
-To learn more about Next.js, take a look at the following resources:
+To create a new aircraft checklist the file should export an object implementing the interface `Checklist` located in the folder, precisely inside the `type.ts`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The next step is register the new checklist file in the `index.ts`. After this you can build the project.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```shell
+yarn build
+```
 
-## Deploy on Vercel
+The result will look partially like this:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```shell
+Route (app)                                Size     First Load JS
+┌ ○ /                                      477 B          87.1 kB
+├ ● /checklist/[id]                        1.84 kB        78.7 kB
+├   ├ /checklist/cessna-152
+├   ├ /checklist/cessna-citation-cj4
+├   └ /checklist/airbus-a320-a32nx
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+...
+
+○  (Static)  automatically rendered as static HTML (uses no initial props)
+●  (SSG)     automatically generated as static HTML + JSON (uses getStaticProps)
+```
