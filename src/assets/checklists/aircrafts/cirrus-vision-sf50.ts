@@ -53,6 +53,27 @@ const CirrusSF50: Checklist = {
       ],
     },
     {
+      name: "BEFORE TAKEOFF",
+      checklist: [
+        { item: "Transponder", expect: "ALT" },
+        { item: "Strobe Lights", expect: "ON" },
+        { item: "Landing Light", expect: "ON" },
+        { item: "Ice Protection", expect: "As Required" },
+      ],
+    },
+    {
+      name: "AFTER TAKEOFF",
+      checklist: [
+        { item: "Landing Gear", expect: "UP" },
+        { item: "Flaps", expect: "UP" },
+        { item: "Climb Power", expect: "SET" },
+        { item: "Engine Temp and Pressure", expect: "CHECK" },
+        { item: "Cabin Pressure", expect: "CHECK" },
+        { item: "Landing Light", expect: "OFF" },
+        { item: "Ice Protection", expect: "AS REQUIRED" },
+      ],
+    },
+    {
       name: "CRUISE",
       checklist: [
         { item: "Altimeter", expect: "CHECK STD" },
@@ -83,11 +104,11 @@ const CirrusSF50: Checklist = {
     {
       name: "LANDING",
       checklist: [
-        {item: "Landing Gear",expect: "DOWN and LOCKED"},
-        {item: "Flaps",expect: "50%-100% AS REQUIRED"},
-        {item: "Ice Protection",expect: "AS REQUIRED"},
-        {item: "Airspeed",expect: "VREF to VREF + 10"},
-        {item: "Windshield IPS Switch",expect: "OFF"},
+        { item: "Landing Gear", expect: "DOWN and LOCKED" },
+        { item: "Flaps", expect: "50%-100% AS REQUIRED" },
+        { item: "Ice Protection", expect: "AS REQUIRED" },
+        { item: "Airspeed", expect: "VREF to VREF + 10" },
+        { item: "Windshield IPS Switch", expect: "OFF" },
       ],
     },
     {
