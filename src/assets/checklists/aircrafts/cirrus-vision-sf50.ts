@@ -44,7 +44,7 @@ const CirrusSF50: Checklist = {
         { item: "Rwy HDG and Init Alt", expect: "SET" },
         { item: "Departure Briefing", expect: "COMPLETE" },
         { item: "Flight Controls", expect: "CHECK / FREE" },
-        { item: "Trims", expect: "CHECK 3 SET" },
+        { item: "Trims", expect: "CHECK 6 SET" },
         { item: "Flaps", expect: "50%" },
         { item: "Probe Heat", expect: "ON" },
         { item: "TO/GA Button", expect: "PRESS" },
