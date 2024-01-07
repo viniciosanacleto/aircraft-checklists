@@ -11,7 +11,7 @@ const Checklists: { [id: string]: Checklist } = {
   "cessna-citation-cj4": CessnaCitationCJ4,
   "airbus-a320-a32nx": AirbusA320,
   "cirrus-sf50": CirrusSF50,
-  "boeing-738": Boeing738
+  "boeing-738": Boeing738,
   "learjet-35": Learjet35
 };
 
