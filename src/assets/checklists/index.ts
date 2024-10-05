@@ -5,6 +5,7 @@ import CirrusSF50 from "./aircrafts/cirrus-vision-sf50";
 import Boeing738 from "./aircrafts/boeing-738";
 import Learjet35 from "./aircrafts/learjet-35";
 import AirbusA300600 from "./aircrafts/airbus-a300-600";
+import BeechcraftKingAir350 from "./aircrafts/beechcraft-kingair-350";
 import { Checklist } from "./type";
 
 const Checklists: { [id: string]: Checklist } = {
@@ -14,7 +15,8 @@ const Checklists: { [id: string]: Checklist } = {
   "cirrus-sf50": CirrusSF50,
   "boeing-738": Boeing738,
   "learjet-35": Learjet35,
-  "airbus-a300-600": AirbusA300600
+  "airbus-a300-600": AirbusA300600,
+  "beechcraft-kingair-350": BeechcraftKingAir350,
 };
 
 export default Checklists;
