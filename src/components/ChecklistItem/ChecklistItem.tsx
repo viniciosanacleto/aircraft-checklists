@@ -36,9 +36,12 @@ export default function ChecklistItem({
   return (
     <div className={rootClassname} onClick={handleClick}>
       <div className={style.Checkbox}>{isChecked ? "+" : null}</div>
-      <div className={style.Item}>{check}</div>
-      <div className={style.Separator} />
-      <div className={style.Expect}>{expect}</div>
+      <div className={style.CheckItemContainer}>
+        {isChecked && <hr className={style.Crossline} />}
+        <div className={style.Item}>{check}</div>
+        <div className={style.Separator} />
+        <div className={style.Expect}>{expect}</div>
+      </div>
     </div>
   );
 }

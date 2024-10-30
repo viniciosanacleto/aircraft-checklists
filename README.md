@@ -6,6 +6,10 @@
 
  Sophisticated and highly interactive aircraft checklists for simulation purposes, utilizing exclusively frontend technologies!
 
+# Changelog
+
+To see the changelog [click here](https://github.com/viniciosanacleto/aircraft-checklists/blob/main/CHANGELOG.md)
+
 ## Demo
 [Link](https://aircraft-checklists.vercel.app/)
 
