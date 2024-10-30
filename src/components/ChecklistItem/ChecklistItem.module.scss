@@ -16,24 +16,7 @@
     .Separator {
       border-color: green;
     }
-
   }
-}
-
-.Separator {
-  width: 100%;
-  height: 2px;
-
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
-  border-style: dashed;
-}
-
-.Item,
-.Expect {
-  width: fit-content;
-  white-space: nowrap;
-  text-transform: uppercase;
 }
 
 .Checkbox {
@@ -42,11 +25,44 @@
   align-items: center;
 
   min-width: 24px;
+  max-width: 24px;
   min-height: 24px;
+  max-height: 24px;
   padding: 2px;
 
   border: 2px solid white;
   border-radius: 4px;
 
   background-color: transparent;
+}
+
+.CheckItemContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+
+  .Crossline{
+    position: absolute;
+    width: 100%;
+    border-color: green;
+  }
+
+  .Separator {
+    width: 100%;
+    height: 2px;
+
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    border-style: dashed;
+  }
+
+  .Item,
+  .Expect {
+    width: fit-content;
+    white-space: nowrap;
+    text-transform: uppercase;
+  }
 }
