@@ -5,6 +5,7 @@ import NoRealFlightTag from "@/components/NoRealFlightTag/NoRealFlightTag";
 import { slugify } from "@/utils/slugify";
 
 import style from "./page.module.scss";
+import HeaderMetar from "@/widgets/HeaderMetar";
 
 interface ChecklistPageProps {
   params: { [key: string]: string };
@@ -30,7 +31,8 @@ export default function ChecklistPage({ params }: ChecklistPageProps) {
         <h1>
           {aircraftChecklists.manufacturer} - {aircraftChecklists.model}
         </h1>
-        <NoRealFlightTag></NoRealFlightTag>
+        <NoRealFlightTag />
+        <HeaderMetar />
       </div>
 
       {aircraftChecklists.checklists.map((checklist) => {
