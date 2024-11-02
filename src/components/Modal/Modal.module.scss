@@ -1,0 +1,78 @@
+/* Overlay */
+.ModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+
+  @media (max-width: 767px) {
+    align-items: flex-end; /* Aligns the modal to the bottom */
+  }
+
+  &.Open {
+    display: flex;
+  }
+}
+
+/* Slide-in animation for mobile */
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Modal content */
+.Modal {
+  display: flex;
+  flex-direction: column;
+
+  background: white;
+  padding: 20px 20px 38px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(0);
+  color: #000;
+
+  @media (min-width: 768px) {
+    transform: translate(0, 0);
+  }
+
+  @media (max-width: 767px) {
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+    padding: 20px;
+    animation: slideInUp 0.3s ease forwards; /* Apply animation */
+  }
+
+  .CloseSection {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+
+    .CloseButton {
+      cursor: pointer;
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}

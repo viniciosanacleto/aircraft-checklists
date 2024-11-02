@@ -4,14 +4,20 @@
   gap: 4px;
   align-items: center;
   border-radius: 8px;
-  padding: 8px;
+  padding: 4px;
   font-weight: bold;
   font-size: 12px;
   cursor: pointer;
+
+  svg{
+    fill: white;
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .NoMetarSelected {
   width: fit-content;
-  background-color: #5fa9fe;
-  color: black;
+  background-color: #646464;
+  color: white;
 }

@@ -1,16 +1,36 @@
+"use client";
+
 import classNames from "classnames";
 import styles from "./HeaderMetar.module.scss";
-import Image from "next/image";
+import WeatherIcon from "../../../public/img/icons/weather.svg";
+import Modal from "@/components/Modal/Modal";
+import { useState } from "react";
+
 export default function HeaderMetar() {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const handleModalClose = () => {
+    setModalOpen(false);
+  };
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
   return (
-    <div className={classNames(styles.Pill, styles.NoMetarSelected)}>
-      <img
-        src={"/img/icons/weather.svg"}
-        alt="Metar"
-        width={18}
-        height={18}
-      ></img>
-      SELECT METAR
-    </div>
+    <>
+      <Modal isOpen={modalOpen} onClose={handleModalClose}>
+        <div>
+          <span>Hellow</span>
+        </div>
+      </Modal>
+      <div
+        className={classNames(styles.Pill, styles.NoMetarSelected)}
+        onClick={openModal}
+      >
+        <WeatherIcon />
+        SELECT METAR
+      </div>
+    </>
   );
 }
