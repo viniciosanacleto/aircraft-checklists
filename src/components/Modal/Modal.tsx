@@ -3,7 +3,7 @@
 import styles from "./Modal.module.scss";
 import CloseIcon from "../../../public/img/icons/close.svg";
 import classNames from "classnames";
-import { MouseEvent } from "react";
+import { MouseEvent, useEffect, useState } from "react";
 
 type ModalProps = {
   children: React.ReactNode;
@@ -12,6 +12,8 @@ type ModalProps = {
 };
 
 export default function Modal({ children, isOpen, onClose }: ModalProps) {
+  const [isShown, setIsShown] = useState(false);
+
   const handleOverlayClick = (
     ev: MouseEvent<HTMLDivElement, globalThis.MouseEvent>
   ) => {
@@ -28,11 +30,23 @@ export default function Modal({ children, isOpen, onClose }: ModalProps) {
     }
   };
 
+  useEffect(() => {
+    if (isOpen) {
+      setTimeout(() => {
+        setIsShown(true);
+      }, 100);
+    }
+  }, [isOpen]);
+
+  if (!isOpen) {
+    return <></>;
+  }
+
   return (
     <div
       className={classNames({
         [styles.ModalOverlay]: true,
-        [styles.Open]: isOpen,
+        [styles.Open]: isShown,
       })}
       onClick={(ev) => handleOverlayClick(ev)}
     >
